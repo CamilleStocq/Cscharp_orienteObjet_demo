@@ -25,8 +25,8 @@ namespace Demo_Class
 
             maFerrari.nbRoues--;
 
-            Console.WriteLine($"Ma voiture à maintenant {maFerrari.nbRoues}");
-            Console.WriteLine($"La voiture de ma fille à maintenant {maFerrari.nbRoues}");
+            Console.WriteLine($"Ma voiture à maintenant {maFerrari.nbRoues}roues");
+            Console.WriteLine($"La voiture de ma fille à maintenant {maFerrari.nbRoues}roues");
         }
     }
 }
