@@ -9,7 +9,7 @@ namespace EXO1_jeu.models
     internal class Joeurs
     {
         public string nom;
-        public Pions pions;
+        public string pions;
         public int position;
     }
 }
