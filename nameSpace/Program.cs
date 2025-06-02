@@ -8,10 +8,10 @@ namespace nameSpace
         static void Main(string[] args)
         {
             Item objetInventaire = new Item();
-            objetInventaire.Name = " poudre magique";
+            objetInventaire.Name = "poudre magique";
             objetInventaire.Value = 13;
 
-            Console.WriteLine($"dans mon sac j'ai de la{objetInventaire.Name} de {objetInventaire.Value} de puissace!");
+            Console.WriteLine($"dans mon sac j'ai de la {objetInventaire.Name} de {objetInventaire.Value} de puissace!");
         }
     }
 }
