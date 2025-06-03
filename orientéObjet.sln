@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.36105.23
+VisualStudioVersion = 17.13.36105.23 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nameSpace", "nameSpace\nameSpace.csproj", "{8846CFCB-F825-4CAD-8524-62D4A52FC63C}"
 EndProject
@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "demo_static", "demo_static\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exo_Monopoly", "Exo_Monopoly\Exo_Monopoly.csproj", "{046C9D5A-6844-4A11-98B3-955EDF65210C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exo_Monopoly", "..\..\Desktop\exo_Monopoly\exo_Monopoly.csproj", "{992EA86D-59CA-467F-BAB8-2CB1FF7E8210}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +31,10 @@ Global
 		{E4E273A3-6057-4B59-A56B-5312B9F4842A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4E273A3-6057-4B59-A56B-5312B9F4842A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4E273A3-6057-4B59-A56B-5312B9F4842A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{046C9D5A-6844-4A11-98B3-955EDF65210C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{046C9D5A-6844-4A11-98B3-955EDF65210C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{046C9D5A-6844-4A11-98B3-955EDF65210C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{046C9D5A-6844-4A11-98B3-955EDF65210C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{992EA86D-59CA-467F-BAB8-2CB1FF7E8210}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{992EA86D-59CA-467F-BAB8-2CB1FF7E8210}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{992EA86D-59CA-467F-BAB8-2CB1FF7E8210}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{992EA86D-59CA-467F-BAB8-2CB1FF7E8210}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
