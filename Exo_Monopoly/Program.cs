@@ -1,6 +1,4 @@
-﻿using System;
-using EXO1_jeu.Enums;
-using EXO1_jeu.models;
+﻿using EXO1_jeu.Enums;
 
 namespace EXO1_jeu
 {
@@ -11,8 +9,8 @@ namespace EXO1_jeu
             //Pions p = Pions.Dino;
             Console.WriteLine($"Creation d'un joueur. Choisir un pion: ");
             string[] pionNames = Enum.GetNames<Pions>();
-            
-            foreach ( string pionName in pionNames )
+
+            foreach (string pionName in pionNames)
             {
                 Console.WriteLine($"\t- {pionName}");
             }
@@ -22,17 +20,18 @@ namespace EXO1_jeu
 
             Pions choice = Enum.Parse<Pions>(userInput);
 
-            bool aFaitunDouble = pionNames.Avancer()
-            {
-                if (aFaitunDouble)
-                {
-                    Console.WriteLine("");
-                }
-                else {
-                    Console.WriteLine("");
-                }
+            //bool aFaitunDouble = pionNames.Avancer()
+            //{
+            //    if (aFaitunDouble)
+            //    {
+            //        Console.WriteLine("");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("");
+            //    }
 
-            }
+            //}
         }
     }
 }
