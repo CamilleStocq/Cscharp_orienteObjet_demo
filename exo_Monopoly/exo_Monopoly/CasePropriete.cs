@@ -1,60 +1,64 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using exo_Monopoly.couleurs;
+using exo_Monopoly.Pions;
 
 namespace exo_Monopoly
 {
-    internal class CasePropriete
+    internal static class CasePropriete
     {
-        private string _name;
-        private string _color;
-        private int _price;
+        private string _nom;
+        private Couleurs _couleur;
+        private int _prix;
         private bool _estHypotequee;
         private Joueur _proprietaire;
 
-        public string Name
+        public string Nom
         {
-            get { return _name; }
-            set { _name = value; }
+            get { return _nom; }           
         }
 
-        public string Color
+        public Couleurs Couleurs
         {
-            get { return _color; }
-            set { _color = value; }
+            get { return _couleur; }
         }
 
-        public int Price
+        public int Prix
         {
-            get { return _price; }
-            set { _price = value; }
+            get { return _prix; }
         }
 
-        public bool estHypotequee
+        public bool EstHypotequee
         {
             get { return _estHypotequee; }
-            set { _estHypotequee = value; }
         }
 
         public Joueur Proprietaire
         {
             get { return _proprietaire; }
-            set { _proprietaire = value; }
         }
 
+        // ca c'est un constructeur, on le nomme pareil que la class et on lui donne des propriétées
+        public CasePropriete(string nom, Couleurs couleur, int prix)
+        {
+            _nom = nom;
+            _couleur = couleur;
+            _prix = prix;
+            _estHypotequee = false;
+            _proprietaire = null;
+        }
 
-        public void string Acheter
-        { 
-            get 
+        public void Acheter
+        {
+            if (acheteur.Solde >= _prix)
             {
-                ; 
-            } 
-            set 
-            { 
-                ; 
-            } 
+                Console.WriteLine("bravo vous etes propriétaire");
+            acheteur.Solde -= _prix;
+            _proprietaire = acheteur
+            }
         }
     }
 }
