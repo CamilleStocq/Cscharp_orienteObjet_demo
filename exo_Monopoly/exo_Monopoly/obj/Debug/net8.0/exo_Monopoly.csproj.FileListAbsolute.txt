@@ -1,0 +1,14 @@
+C:\Users\c.stock\OneDrive - Interface3\Desktop\exo_Monopoly\obj\Debug\net8.0\exo_Monopoly.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\c.stock\OneDrive - Interface3\Desktop\exo_Monopoly\obj\Debug\net8.0\exo_Monopoly.AssemblyInfoInputs.cache
+C:\Users\c.stock\OneDrive - Interface3\Desktop\exo_Monopoly\obj\Debug\net8.0\exo_Monopoly.AssemblyInfo.cs
+C:\Users\c.stock\OneDrive - Interface3\Desktop\exo_Monopoly\obj\Debug\net8.0\exo_Monopoly.csproj.CoreCompileInputs.cache
+C:\Users\c.stock\OneDrive - Interface3\Desktop\exo_Monopoly\bin\Debug\net8.0\exo_Monopoly.exe
+C:\Users\c.stock\OneDrive - Interface3\Desktop\exo_Monopoly\bin\Debug\net8.0\exo_Monopoly.deps.json
+C:\Users\c.stock\OneDrive - Interface3\Desktop\exo_Monopoly\bin\Debug\net8.0\exo_Monopoly.runtimeconfig.json
+C:\Users\c.stock\OneDrive - Interface3\Desktop\exo_Monopoly\bin\Debug\net8.0\exo_Monopoly.dll
+C:\Users\c.stock\OneDrive - Interface3\Desktop\exo_Monopoly\bin\Debug\net8.0\exo_Monopoly.pdb
+C:\Users\c.stock\OneDrive - Interface3\Desktop\exo_Monopoly\obj\Debug\net8.0\exo_Monopoly.dll
+C:\Users\c.stock\OneDrive - Interface3\Desktop\exo_Monopoly\obj\Debug\net8.0\refint\exo_Monopoly.dll
+C:\Users\c.stock\OneDrive - Interface3\Desktop\exo_Monopoly\obj\Debug\net8.0\exo_Monopoly.pdb
+C:\Users\c.stock\OneDrive - Interface3\Desktop\exo_Monopoly\obj\Debug\net8.0\exo_Monopoly.genruntimeconfig.cache
+C:\Users\c.stock\OneDrive - Interface3\Desktop\exo_Monopoly\obj\Debug\net8.0\ref\exo_Monopoly.dll
