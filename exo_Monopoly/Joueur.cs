@@ -11,11 +11,14 @@ namespace exo_Monopoly
     {
         public string nom;
         public Pions pion;
-        private int position = 0;
+        private int _position;
+        private int _solde;
 
-        public int positon
+        private List<CasePropriete> _proprietes;
+
+        public int Positon
         {
-            get => position;
+            get => _position;
         }
 
         public int Solde
@@ -24,12 +27,51 @@ namespace exo_Monopoly
             private set;
         }
 
+        public CasePropriete[] Proprietes
+        {
+            get => _proprietes.ToArray();
+        }
+
+        public Joueur(string nom, Pion pion)
+        {
+            Nom = nom;
+            Pion = pion;
+            _solde = 1500;
+            _position = 0;
+            _proprietes = new List<CasePropriete>();
+        }
+
+        public void EtrePaye (int montant)
+        {
+            _solde += montant ;
+        }
+
+        public void Payer (int montant)
+        {
+            if (_solde >= montant)
+            {
+                _solde -= montant;
+            }
+            else
+            {
+                Console.WriteLine($"{Nom}, tu n'as pas assez d'agent pour payer{montant} ");
+            }
+        }
+
+        public void AjouterPropriete (CasePropriete propriete)
+        {
+            if(propriete.Proprietaire == acheteur)
+            {
+                _proprietes.Add(propriete);
+            }
+        }
+
         public bool Avancer()
         {
             int[] resultatDe = De.Lancer(2);
 
             int somme = resultatDe[0] + resultatDe[1];
-            position += somme;
+            _position += somme;
 
             if (resultatDe[0] == resultatDe[1])
             {
