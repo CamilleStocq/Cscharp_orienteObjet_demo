@@ -22,7 +22,7 @@ namespace exo_Monopoly
                 {
                     valeurMin = value;
                     if (value >= valeurMax)
-                        valeurMax = valeurMin + 1;
+                        valeurMax = valeurMin - 1;
                 }
             }
         }
