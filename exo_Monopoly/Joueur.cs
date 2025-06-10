@@ -1,66 +1,57 @@
 ﻿using exo_Monopoly.Enums;
+using exo_Monopoly;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Reflection.Metadata;
 
 namespace exo_Monopoly
 {
     internal class Joueur
     {
-        public string nom;
-        public Pions pion;
+        public string Nom;
+        public Pions Pion;
         private int _position;
         private int _solde;
 
-        private List<CasePropriete> _proprietes;
+        private List<CasePropriete> _proprietes = new();
 
-        public int Positon
+        public int Position
         {
-            get => _position;
+            get { return _position; }
+            set  { _position = value; }
         }
 
         public int Solde
         {
-            get;
-            private set;
+            get { return _solde; }
+            private set { _solde = value; }
         }
 
-        public CasePropriete[] Proprietes
+        public List<CasePropriete> Proprietes
         {
-            get => _proprietes.ToArray();
+            get { return _proprietes; } 
+            set { _proprietes = value; }
         }
 
-        public Joueur(string nom, Pion pion)
+        public Joueur(string nom, Pions pion)
         {
             Nom = nom;
             Pion = pion;
-            _solde = 1500;
-            _position = 0;
-            _proprietes = new List<CasePropriete>();
+            Solde = 1500;
+            Position = 0;
+            Proprietes = new List<CasePropriete>();
         }
 
-        public void EtrePaye (int montant)
+        public void EtrePaye(int montant)
         {
-            _solde += montant ;
-        }
-
-        public void Payer (int montant)
-        {
-            if (_solde >= montant)
+            if (montant > 0)
             {
-                _solde -= montant;
-            }
-            else
-            {
-                Console.WriteLine($"{Nom}, tu n'as pas assez d'agent pour payer{montant} ");
+                Solde += montant;
             }
         }
 
-        public void AjouterPropriete (CasePropriete propriete)
+        public void AjouterPropriete(CasePropriete propriete)
         {
-            if(propriete.Proprietaire == acheteur)
+            if (propriete != null && propriete.Proprietaire==this)
             {
                 _proprietes.Add(propriete);
             }
@@ -85,6 +76,17 @@ namespace exo_Monopoly
             return resultatDe[0] == resultatDe[1];
 
         }
-    }
 
+        public void Payer(int prix)
+        {
+            if (Solde >= prix && prix >0)
+            {
+                Solde -= prix;
+            }
+            else
+            {
+                Console.WriteLine($"{Nom}, tu n'as pas assez d'agent pour payer {prix}. ");
+            }
+        }
+    }
 }
