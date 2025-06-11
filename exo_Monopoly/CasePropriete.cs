@@ -57,10 +57,10 @@ namespace exo_Monopoly
         {
             if (acheteur.Solde >= Prix && Proprietaire == null)
             {
-                int SoldeFinal = acheteur.Solde - Prix;
+                int SoldeFinal = acheteur.Solde - Prix; // calcul du solde du joueur apres achat
                 acheteur.Payer(Prix);
 
-                if (SoldeFinal == acheteur.Solde)
+                if (SoldeFinal == acheteur.Solde) // le joueur est proprietaire
                 {
                     Proprietaire = acheteur;
                     Console.WriteLine("bravo vous etes propriétaire");

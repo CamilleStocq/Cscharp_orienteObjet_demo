@@ -43,7 +43,7 @@ namespace exo_Monopoly
 
         public void EtrePaye(int montant)
         {
-            if (montant > 0)
+            if (montant > 0) // si le montant est supperieur à 0 il faut payer la somme
             {
                 Solde += montant;
             }
@@ -51,20 +51,20 @@ namespace exo_Monopoly
 
         public void AjouterPropriete(CasePropriete propriete)
         {
-            if (propriete != null && propriete.Proprietaire==this)
+            if (propriete != null && propriete.Proprietaire==this) // pour voir si on peut acheter la case et qu'elle n'a pas deja un autre proprietaire
             {
-                _proprietes.Add(propriete);
+                _proprietes.Add(propriete); // si elle n'appartient à personne on l'ajoute à sa collection
             }
         }
 
         public bool Avancer()
         {
-            int[] resultatDe = De.Lancer(2);
+            int[] resultatDe = De.Lancer(2); // on lance deux dés
 
-            int somme = resultatDe[0] + resultatDe[1];
+            int somme = resultatDe[0] + resultatDe[1]; // on additionne le resultat des deux dés
             _position += somme;
 
-            if (resultatDe[0] == resultatDe[1])
+            if (resultatDe[0] == resultatDe[1]) // si le dé 1 et le dé 2 on le meme chiffre on relance le dé
             {
                 Console.WriteLine("Vous avez obtenu un double !!! Relancer le dé.");
             }
@@ -79,14 +79,21 @@ namespace exo_Monopoly
 
         public void Payer(int prix)
         {
-            if (Solde >= prix && prix >0)
+            if (Solde >= prix && prix >0) // vérifier qu'on a suffisement d'argent pour acheter 
             {
-                Solde -= prix;
+                Solde -= prix; // on enleve le prix de l'achat à notre argent total
             }
             else
             {
                 Console.WriteLine($"{Nom}, tu n'as pas assez d'agent pour payer {prix}. ");
             }
         }
+
+        public static Joueur operator + (Joueur left, int right) // surcharge d'operateur, on veut recuperer la somme et rajouter de largent au total
+        {
+            left.EtrePaye(right); //ca augmente deja le montant donc pas besoin de le remettre
+            return left;
+        }
+            
     }
 }

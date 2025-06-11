@@ -6,7 +6,7 @@ namespace exo_Monopoly
     {
         static void Main(string[] args)
         {
-            CasePropriete[] cases =
+            CasePropriete[] cases = //créations des cases avec leurs différentes variables
             {
                 new CasePropriete("Patio", Couleurs.Marron, 20),
                 new CasePropriete("Accueil", Couleurs.Marron, 23),
@@ -29,13 +29,13 @@ namespace exo_Monopoly
 
             };
 
-            Jeu monopoly = new Jeu(cases);
+            Jeu monopoly = new Jeu(cases); // creation du jeu dans le programme
 
             Console.WriteLine($"Votre plateau compte {monopoly.Plateau.Length} cases.");
 
             int nbJoueurs;
             do Console.WriteLine("Combien de joueur jouent ? (entre 2 t 6 joueurs) :");
-            while (!int.TryParse(Console.ReadLine(), out nbJoueurs) || nbJoueurs < 2 || nbJoueurs > 6); 
+            while (!int.TryParse(Console.ReadLine(), out nbJoueurs) || nbJoueurs < 2 || nbJoueurs > 6); // pour savoir le nombre de joueurs ( on doit en avoir entre 2 et 6 . si pas on redemande 
 
             do
             {
@@ -43,7 +43,7 @@ namespace exo_Monopoly
                 string userName = Console.ReadLine();
 
                 Console.WriteLine($"Creation d'un joueur. Choisir un pion: ");
-                string[] pionNames = Enum.GetNames<Pions>();
+                string[] pionNames = Enum.GetNames<Pions>();// on va chercher les pions dans l'enum
 
                 foreach (string pionName in pionNames) // choix du pion
                 {
@@ -76,13 +76,14 @@ namespace exo_Monopoly
                 while (isDouble) // pour savoir si le joueur fait un double et lui faire relancer les dé si c'est le cas sinon il sort de la boucle
                 {
                     Console.WriteLine("Vous avez obtenu un double !!! Relancer le dé.");
+
+                    joueurActuel = joueurActuel + 200;
+
                     Console.WriteLine($"Le joueur {joueurActuel.Nom} avec le pion {joueurActuel.Pion} se trouve à la case {caseActuel.Nom}.");
                     isDouble = joueurActuel.Avancer();
                 }
                 Console.WriteLine($"Le joueur {joueurActuel.Nom} avec le pion {joueurActuel.Pion} se trouve à la case {caseActuel.Nom}.");
                 
-
-
                 tourJoueur++; // pour permettre de changer de joueur 
             }
 
