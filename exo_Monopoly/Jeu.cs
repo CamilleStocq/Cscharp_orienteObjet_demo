@@ -52,7 +52,15 @@ namespace exo_Monopoly
 
         public void AjouterJoueur (string nom, Pions pion)
         {
-            //if ()
+            foreach (Joueur j in _joueurs)
+            {
+                if (j.Pion == pion)
+                {
+                    Console.WriteLine($"Le pion {pion} est deja prit.");
+                    return;
+                }
+            }
+            _joueurs.Add(new Joueur(nom, pion));
         }
     }
 }
