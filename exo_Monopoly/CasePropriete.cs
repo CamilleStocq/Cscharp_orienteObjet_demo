@@ -12,10 +12,10 @@ namespace exo_Monopoly
         private Joueur? _proprietaire;
         public string Acheteur { get; private set; }
 
-        public string Nom
+        public string Nom // propiété
         {
-            get { return _nom; }
-            private set { _nom = value; }
+            get { return _nom; } // recoit l'info
+            private set { _nom = value; } // renvoit l'info
 
         }
 
