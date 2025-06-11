@@ -81,6 +81,7 @@ namespace exo_Monopoly
 
                     Console.WriteLine($"Le joueur {joueurActuel.Nom} avec le pion {joueurActuel.Pion} se trouve à la case {caseActuel.Nom}.");
                     isDouble = joueurActuel.Avancer();
+                    caseActuel = monopoly[joueurActuel.Position];
                 }
                 Console.WriteLine($"Le joueur {joueurActuel.Nom} avec le pion {joueurActuel.Pion} se trouve à la case {caseActuel.Nom}.");
                 

@@ -94,6 +94,14 @@ namespace exo_Monopoly
             left.EtrePaye(right); //ca augmente deja le montant donc pas besoin de le remettre
             return left;
         }
+
+        public static List<CasePropriete> operator + (Joueur left , CasePropriete right) // left = qui recoit, right = ce qu'on recoit
+        {
+            right.Acheter(left);
+            left.AjouterPropriete(right);
+            return left.Proprietes;
+            
+        }
             
     }
 }
