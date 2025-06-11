@@ -4,26 +4,13 @@
     {
         static void Main(string[] args)
         {
-            Forme f = new Forme() 
-            { 
-                Color = "Rose", 
-                BorderWidth = 2 
-            };
+            Forme f = new Forme("Rose", 2);
 
-            Rectangle r = new Rectangle() 
-            { 
-                Color = "Jaune", 
-                Largeur = 3,
-                Longueur = 5, 
-                BorderWidth = 4
-            };
+            Rectangle r = new Rectangle("jaune", 3, 5, 4);
 
-            Cercle c = new Cercle() 
-            { 
-                Color = "Vert", 
-                Rayon = 5, 
-                BorderWidth = 3
-            };
+            Cercle c = new Cercle("vert" , 5 , 4); 
+            
+            Carre c2 = new Carre("bleu", 5, 1);
         }
     }
 }

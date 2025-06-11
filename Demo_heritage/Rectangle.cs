@@ -45,5 +45,10 @@ namespace Demo_heritage
                 }
             }
 		}
-	}
+        public Rectangle(string color, int borderWidth, int largeur, int longueur) : base (color, borderWidth)
+        {
+            Largeur = largeur;
+			Longueur = longueur;
+        }
+    }
 }

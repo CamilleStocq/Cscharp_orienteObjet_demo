@@ -10,7 +10,12 @@ namespace Demo_heritage
     {
 		private int _rayon;
 
-		public int Rayon
+        public Cercle(string color, int borderWidth, int rayon) : base(color, borderWidth)
+        {
+			Rayon = rayon;
+        }
+
+        public int Rayon
 		{
 			get { return _rayon; }
 			set 

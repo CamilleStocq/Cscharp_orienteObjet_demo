@@ -8,8 +8,8 @@ namespace Demo_heritage
 {
     internal class Forme
     {
-        public string Color { get; set; } // auto propriété pour évité variable public
         private int _borderWidth;
+        public string Color { get; set; } // auto propriété pour évité variable public
 
 
         public int BorderWidth
@@ -22,6 +22,12 @@ namespace Demo_heritage
             {
                 _borderWidth = (value < 0) ? -value : value; // = à ca if (value < 0) value value                                                _rayon = value;
             }
+        }
+
+        public Forme(string color, int borderWidth)
+        {
+            Color = color;
+            BorderWidth = borderWidth;
         }
     }
 }
