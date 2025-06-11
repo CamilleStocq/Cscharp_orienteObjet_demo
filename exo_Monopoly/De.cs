@@ -8,12 +8,12 @@ namespace exo_Monopoly
 {
     internal static class De
     {
-        private static int _valeurMin = 1;
+        private static int _valeurMin = 1; // _ pour le nom des private, Maj pour les publics
         private static int _valeurMax = 6;
         public static int nbDes = 2;
         public static Random rng = new Random();
 
-        public static int ValeurMin
+        public static int ValeurMin // valeur min du dé
         {
             get { return _valeurMin; }
             set
@@ -27,7 +27,7 @@ namespace exo_Monopoly
             }
         }
 
-        public static int ValeurMax
+        public static int ValeurMax // valeur max du dé 
         {
             get { return _valeurMax; }
             set

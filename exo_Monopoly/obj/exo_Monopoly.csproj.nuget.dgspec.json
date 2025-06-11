@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\c.stock\\OneDrive - Interface3\\C#\\orientéObjet\\Exo_Monopoly\\Exo_Monopoly.csproj": {}
+    "C:\\Users\\c.stock\\OneDrive - Interface3\\Desktop\\exo_Monopoly\\exo_Monopoly.csproj": {}
   },
   "projects": {
-    "C:\\Users\\c.stock\\OneDrive - Interface3\\C#\\orientéObjet\\Exo_Monopoly\\Exo_Monopoly.csproj": {
+    "C:\\Users\\c.stock\\OneDrive - Interface3\\Desktop\\exo_Monopoly\\exo_Monopoly.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\c.stock\\OneDrive - Interface3\\C#\\orientéObjet\\Exo_Monopoly\\Exo_Monopoly.csproj",
-        "projectName": "Exo_Monopoly",
-        "projectPath": "C:\\Users\\c.stock\\OneDrive - Interface3\\C#\\orientéObjet\\Exo_Monopoly\\Exo_Monopoly.csproj",
+        "projectUniqueName": "C:\\Users\\c.stock\\OneDrive - Interface3\\Desktop\\exo_Monopoly\\exo_Monopoly.csproj",
+        "projectName": "exo_Monopoly",
+        "projectPath": "C:\\Users\\c.stock\\OneDrive - Interface3\\Desktop\\exo_Monopoly\\exo_Monopoly.csproj",
         "packagesPath": "C:\\Users\\c.stock\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\c.stock\\OneDrive - Interface3\\C#\\orientéObjet\\Exo_Monopoly\\obj\\",
+        "outputPath": "C:\\Users\\c.stock\\OneDrive - Interface3\\Desktop\\exo_Monopoly\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
