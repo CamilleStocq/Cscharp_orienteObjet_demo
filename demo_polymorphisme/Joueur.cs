@@ -18,6 +18,9 @@ namespace demo_polymorphisme
             }
         } 
         public int Solde { get;set; }
+
+        public Equipement MainGauche { get; private set; }
+        public Equipement MainDroite { get; private set; }
         
         public Joueur()
         {
@@ -34,6 +37,18 @@ namespace demo_polymorphisme
         {
            return _inventaire.Remove(objet); 
         }
-         
+
+        public void Equiper(Equipement equipement, bool mainGauche)
+        {
+            if (mainGauche) 
+            {
+                MainGauche = equipement;
+            }
+            else
+            {
+                MainDroite = equipement;
+            }
+
+        }
     }
 }
