@@ -93,7 +93,7 @@
                         if (objetSelectionne is Equipement)
                         {
                             player.Equiper(equipement, true);
-                        }
+                        } 
                         break;
                 } 
             }
