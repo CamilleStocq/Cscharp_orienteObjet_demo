@@ -3,7 +3,7 @@ using exo_Monopoly.Enums;
 
 namespace exo_Monopoly
 {
-    internal class CasePropriete
+    internal class CasePropriete : Case
     {
         private string _nom;
         private Couleurs _couleur;
@@ -12,12 +12,12 @@ namespace exo_Monopoly
         private Joueur? _proprietaire;
         public string Acheteur { get; private set; }
 
-        public string Nom // propiété
-        {
-            get { return _nom; } // recoit l'info
-            private set { _nom = value; } // renvoit l'info
+        //public string Nom // propiété
+        //{
+        //    get { return _nom; } // recoit l'info
+        //    private set { _nom = value; } // renvoit l'info
 
-        }
+        //}
 
         public Couleurs Couleur
         {
@@ -46,7 +46,7 @@ namespace exo_Monopoly
         // ca c'est un constructeur, on le nomme pareil que la class et on lui donne des propriétées
         public CasePropriete(string nom, Couleurs couleur, int prix)
         {
-            Nom = nom;
+            //Nom = nom;
             Couleur = couleur;
             Prix = prix;
             _estHypotequee = false;
