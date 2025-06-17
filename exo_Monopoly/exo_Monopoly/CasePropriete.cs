@@ -53,7 +53,7 @@ namespace exo_Monopoly
             Proprietaire = null;
         }
 
-        public void Acheter(Joueur acheteur)
+        private void Acheter(Joueur acheteur)
         {
             if (acheteur.Solde >= Prix && Proprietaire == null)
             {
@@ -67,5 +67,32 @@ namespace exo_Monopoly
                 }
             }
         }
+        public override void Activer(Joueur visiteur)
+        {
+            if (Proprietaire is null)
+            {
+                if (visiteur.Solde >= Prix)
+                {
+                    Acheter(visiteur);
+                }  
+            }
+            else if (Proprietaire != visiteur) 
+            {
+                Sejourner(visiteur);
+            }
+        }
+
+        private void Sejourner(Joueur visiteur) // division entiere
+        {
+            if (visiteur != Proprietaire)
+           {
+                //le solde du joueur - 1/4 du prix de la case                
+                int droitSejour= this.Prix/4  ;
+                visiteur.Payer(droitSejour);
+                Proprietaire.EtrePaye(droitSejour);
+            }
+
+        }
+
     }
 }

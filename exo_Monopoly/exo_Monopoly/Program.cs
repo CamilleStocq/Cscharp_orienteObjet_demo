@@ -6,14 +6,18 @@ namespace exo_Monopoly
     {
         static void Main(string[] args)
         {
-            CasePropriete[] cases = //créations des cases avec leurs différentes variables
+            Case[] cases = //créations des cases avec leurs différentes variables
             {
+                //new Case ("Case départ"),
+
                 new CasePropriete("Patio", Couleurs.Marron, 20),
                 new CasePropriete("Accueil", Couleurs.Marron, 23),
 
                 new CasePropriete("Ascenceur Gauche", Couleurs.BleuCiel, 26),
                 new CasePropriete("Ascenceur Droit", Couleurs.BleuCiel, 26),
                 new CasePropriete("Toilette RDC", Couleurs.BleuCiel, 30),
+
+                //new Case ("Prison"),
 
                 new CasePropriete("Couloir 4ième étage", Couleurs.Violet, 32),
                 new CasePropriete("Couloir 5ième étage", Couleurs.Violet, 32),
@@ -22,6 +26,8 @@ namespace exo_Monopoly
                 new CasePropriete("Classe des WAD", Couleurs.Orange, 42),
                 new CasePropriete("Classe des WEB", Couleurs.Orange, 42),
                 new CasePropriete("Classe des Games", Couleurs.Orange, 48),
+
+                //new Case("Parc gratuit"),
 
                 new CasePropriete("Bureau Sonia", Couleurs.Bleu, 56),
                 new CasePropriete("Bureau Nicole", Couleurs.Bleu, 56),
@@ -65,7 +71,7 @@ namespace exo_Monopoly
             while (tourJoueur < 40)
             {
                 Joueur joueurActuel = monopoly.Joueurs[tourJoueur % monopoly.Joueurs.Length];
-                CasePropriete caseActuel = monopoly[joueurActuel.Position]; //permet de recuperer la case sur laquelle mon joueur se trouve
+                Case caseActuel = monopoly[joueurActuel.Position]; //permet de recuperer la case sur laquelle mon joueur se trouve
 
 
                 Console.WriteLine($"Le joueur {joueurActuel.Nom} avec le pion {joueurActuel.Pion} se trouve à la case {caseActuel.Nom}.");
@@ -83,11 +89,15 @@ namespace exo_Monopoly
                     joueurActuel = joueurActuel + 200;
 
                     Console.WriteLine($"Le joueur {joueurActuel.Nom} avec le pion {joueurActuel.Pion} se trouve à la case {caseActuel.Nom}.");
-                    
-                    caseActuel.RetirerVisiteur(joueurActuel);
-                    
+
+                    if (caseActuel is CasePropriete caseProp)
+                    {
+                        Console.WriteLine($"C'est une propriété, appatenant à {((caseProp.Proprietaire is null) ? "personne" : $"{caseProp.Proprietaire.Nom} ({caseProp.Proprietaire.Pion})")}.");
+                    }
+
                     isDouble = joueurActuel.Avancer();
 
+                    caseActuel.RetirerVisiteur(joueurActuel);
                     caseActuel = monopoly[joueurActuel.Position];
                     caseActuel.AjouterVisiteur(joueurActuel);
                 }
