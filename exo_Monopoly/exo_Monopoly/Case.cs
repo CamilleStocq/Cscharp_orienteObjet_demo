@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace exo_Monopoly
 {
-    internal class Case
+    internal abstract class Case
     {
         private List<Joueur> _visiteurs;
 
@@ -30,29 +30,15 @@ namespace exo_Monopoly
 
         public void AjouterVisiteur (Joueur visiteur)
         {
-            foreach (Joueur j in Visiteur)
-            {
-                if (visiteur.Position == this.Position)
-                {
-                    _visiteurs.Add(visiteur);
-                }
-            }
-            return;
+            if (_visiteurs.Contains(visiteur)) return;  //Message d'exception
+            _visiteurs.Add(visiteur);
         }
 
         public void RetirerVisiteur (Joueur visiteur)
         {
-            //foreach (Joueur j in Visiteur)
-            //{
-            //    if (visiteur.Position == this.Position)
-            //    {
-            //        _visiteurs.Remove(visiteur);
-            //    }
-            //}
-            //return;
-
-            _visiteurs.Remove(visiteur);
+            if (!_visiteurs.Remove(visiteur)) return;
         }
 
+        public abstract void Activer(Joueur visiteur);
     }
 }

@@ -97,7 +97,7 @@ namespace exo_Monopoly
 
         public static List<CasePropriete> operator + (Joueur left , CasePropriete right) // left = qui recoit, right = ce qu'on recoit
         {
-            right.Acheter(left);
+            //right.Acheter(left);
             left.AjouterPropriete(right);
             return left.Proprietes;
             

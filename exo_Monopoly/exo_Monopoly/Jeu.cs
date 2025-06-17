@@ -12,17 +12,19 @@ namespace exo_Monopoly
         private List<Joueur> _joueurs;
         private List<CasePropriete> _plateau;
 
+        
+
         public Joueur[] Joueurs
         {
             get {return _joueurs.ToArray();} // .ToArray permet de transformer une liste en tableau
         }
 
-        public CasePropriete[] Plateau
+        public Case[] Plateau
         { 
             get{return _plateau.ToArray();}
         }
 
-        public CasePropriete this[int numeroCase]
+        public Case this[int numeroCase]
         { 
             get 
             {
@@ -44,9 +46,9 @@ namespace exo_Monopoly
                         
             }
         }
-        public Jeu(CasePropriete[] casePlateau) // constructeur pour definir l'ensemble des cases du plateau
+        public Jeu(Case[] casePlateau) // constructeur pour definir l'ensemble des cases du plateau
         {
-            _plateau = new List<CasePropriete>(casePlateau);
+            //_plateau = new List<Case>(casePlateau);
             _joueurs = new List<Joueur>();
         }
 
@@ -62,5 +64,6 @@ namespace exo_Monopoly
             }
             _joueurs.Add(new Joueur(nom, pion));
         }
+
     }
 }
